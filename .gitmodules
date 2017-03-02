@@ -1,0 +1,30 @@
+[submodule "LSE/LSE-163"]
+	path = LSE/LSE-163
+	url = https://github.com/lsst/LSE-163.git
+[submodule "LDM/LDM-151"]
+	path = LDM/LDM-151
+	url = https://github.com/lsst/LDM-151.git
+[submodule "LDM/LDM-152"]
+	path = LDM/LDM-152
+	url = https://github.com/lsst/LDM-152.git
+[submodule "LDM/LDM-230"]
+	path = LDM/LDM-230
+	url = https://github.com/lsst/LDM-230.git
+[submodule "LDM/LDM-129"]
+	path = LDM/LDM-129
+	url = https://github.com/lsst/LDM-129.git
+[submodule "LDM/LDM-135"]
+	path = LDM/LDM-135
+	url = https://github.com/lsst/LDM-135.git
+[submodule "LDM/LDM-463"]
+	path = LDM/LDM-463
+	url = https://github.com/lsst/LDM-463.git
+[submodule "LDM/LDM-472"]
+	path = LDM/LDM-472
+	url = https://github.com/lsst/LDM-472.git
+[submodule "LDM/LDM-493"]
+	path = LDM/LDM-493
+	url = https://github.com/lsst/LDM-493.git
+[submodule "LDM/LDM-148"]
+	path = LDM/LDM-148
+	url = https://github.com/lsst/LDM-148.git
