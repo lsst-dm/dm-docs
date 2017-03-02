@@ -28,3 +28,57 @@
 [submodule "LDM/LDM-148"]
 	path = LDM/LDM-148
 	url = https://github.com/lsst/LDM-148.git
+[submodule "SQR/sqr-001"]
+	path = SQR/sqr-001
+	url = https://github.com/lsst-sqre/sqr-001.git
+[submodule "SQR/sqr-000"]
+	path = SQR/sqr-000
+	url = https://github.com/lsst-sqre/sqr-000.git
+[submodule "SQR/sqr-002"]
+	path = SQR/sqr-002
+	url = https://github.com/lsst-sqre/sqr-002.git
+[submodule "SQR/sqr-003"]
+	path = SQR/sqr-003
+	url = https://github.com/lsst-sqre/sqr-003.git
+[submodule "SQR/sqr-004"]
+	path = SQR/sqr-004
+	url = https://github.com/lsst-sqre/sqr-004.git
+[submodule "SQR/sqr-005"]
+	path = SQR/sqr-005
+	url = https://github.com/lsst-sqre/sqr-005.git
+[submodule "SQR/sqr-006"]
+	path = SQR/sqr-006
+	url = https://github.com/lsst-sqre/sqr-006.git
+[submodule "SQR/sqr-007"]
+	path = SQR/sqr-007
+	url = https://github.com/lsst-sqre/sqr-007.git
+[submodule "SQR/sqr-008"]
+	path = SQR/sqr-008
+	url = https://github.com/lsst-sqre/sqr-008.git
+[submodule "SQR/sqr-009"]
+	path = SQR/sqr-009
+	url = https://github.com/lsst-sqre/sqr-009.git
+[submodule "SQR/sqr-011"]
+	path = SQR/sqr-011
+	url = https://github.com/lsst-sqre/sqr-011.git
+[submodule "SQR/sqr-012"]
+	path = SQR/sqr-012
+	url = https://github.com/lsst-sqre/sqr-012.git
+[submodule "SQR/sqr-013"]
+	path = SQR/sqr-013
+	url = https://github.com/lsst-sqre/sqr-013.git
+[submodule "SQR/sqr-014"]
+	path = SQR/sqr-014
+	url = https://github.com/lsst-sqre/sqr-014.git
+[submodule "SQR/sqr-015"]
+	path = SQR/sqr-015
+	url = https://github.com/lsst-sqre/sqr-015.git
+[submodule "SQR/sqr-010"]
+	path = SQR/sqr-010
+	url = https://github.com/lsst-sqre/sqr-010.git
+[submodule "SQR/sqr-016"]
+	path = SQR/sqr-016
+	url = https://github.com/lsst-sqre/sqr-016.git
+[submodule "SQR/sqr-017"]
+	path = SQR/sqr-017
+	url = https://github.com/lsst-sqre/sqr-017.git
