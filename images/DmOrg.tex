@@ -1,0 +1,126 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Document:      DM  organisation chart reporting lines
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+\usepackage{times,layouts}
+\usepackage{tikz,hyperref,amsmath}
+\usetikzlibrary{positioning,arrows,shapes,decorations.shapes,shapes.arrows}
+\usetikzlibrary{backgrounds,calc}
+
+\usepackage[paperwidth=31cm,paperheight=155mm,
+left=-2mm,top=3mm,bottom=0mm,right=0mm,
+noheadfoot,marginparwidth=0pt,includemp=false,
+textwidth=30cm,textheight=50mm]{geometry}
+
+
+\newcommand\showpage{%
+\setlayoutscale{0.5}\setlabelfont{\tiny}\printheadingsfalse\printparametersfalse
+\currentpage\pagedesign}
+
+\hypersetup{pdftitle={DM organisation }, pdfsubject={Diagram illustrating the
+ reporting lines in LSST DM Group}, pdfauthor={ William O'Mullane}}
+
+\input{styles}
+
+
+\newcommand\dmnode[5][]{
+            \node (#2) [mbox, text width=36mm, rectangle split, rectangle split parts=2, #1]
+                {
+                #3
+                \nodepart{second} \vspace{22mm}
+                };
+             \node({#2}t) [mbox,minimum height=6mm, below=6mm of {#2}.north, text width=32mm] {\parbox[height=6mm]{0pt}{}{\small \bf TCAM}\\ #4};
+	    \node({#2}s) [psbox,minimum height=8mm, below=2pt of {#2}t, text width=32mm] {{\small \bf Product Owner}\\ #5};
+        }
+
+
+\begin{document}
+
+\begin{tikzpicture}[node distance=0mm]
+
+
+    \node (dm) [arcbox, text width=30cm,  minimum height=10mm, rectangle split, rectangle split parts=2] 
+	{ \textbf{Data Management Subsystem}
+	   \nodepart{second} \vspace{115mm} 
+	};
+
+    \node (dmpm) [divbox, above=-2.5cm of dm.north] {\textbf{DM Project Manager} William O'Mullane};
+    \node (pm) [divbox, above=.5cm of dm] {\textbf{ Project Manager} Victor Krabendam};
+    \node (dmps) [psbox, right=1.5cm of dmpm] {\textbf{ DM Project Scientist}\\ Mario Juri\'c};
+    \node (ps) [psbox, right=1.5cm of pm] {\textbf{  Project Scientist}\\ \u{Z}eljko Ivezi\'c};
+
+    \node (udmpm) [below=17mm of dmpm, text width=0mm]{};
+% SYSTEM ENG
+            \node (sysengg) [mbox, text width=43mm, rectangle split, rectangle split parts=2, left=3.1cm of udmpm.north]
+                {
+                Systems Engineering
+                \nodepart{second} \vspace{60mm}
+                };
+    \node (man) [mbox, below=6mm of sysengg.north, text width=39mm] {\textbf{ Manager }\\ William O'Mullane };
+    \node (pipe) [psbox, below=1mm of man, text width=39mm] {\textbf{ Pipeline Scientist}\\ Robert Lupton };
+    \node (syseng) [mbox, below=1mm of pipe, text width=39mm] {\textbf{ System Engineer}\\ Tim Jenness };
+    \node (softarc) [mbox, below=1mm of syseng, text width=39mm] {\textbf{ Software Architect}\\ Kian Tat Lim };
+    \node (sysarc) [mbox, below=1mm of softarc, text width=39mm] {\textbf{ Operations Architect}\\ Don Petravick  };
+    \node (reqeng) [psbox, below=1mm of sysarc, text width=39mm] {\textbf{Interface Scientist}\\ Gregory Dubois-Felsmann  };
+%%%% end SYSENG
+
+    \node (pcon) [mbox, right=3.1cm of udmpm.north , text width=45mm] {\textbf{Project Control/Scheduler }\\ Kevin Long?};
+
+    \node (docu) [mbox, below=5mm of pcon, text width=45mm] {\textbf{DM Documentalist}\\ Jonathon Sick ?};
+    \node (pdocu) [mbox, right=5mm of docu, text width=45mm] {\textbf{LSST Documentalist}\\ Robert McKercher};
+
+    \node (admin) [mbox, below=5mm of docu, text width=45mm] {\textbf{DM Admin}\\ Libby Petrick};
+
+    
+
+    %\node (al) [below=69mm of dmpm, text width=0mm]{};
+    \dmnode[below=65mm of dmpm]{suit}{SUIT} {Xiuqin Wu  }{ David Ciardi } ;
+    \dmnode[left=2mm of suit]{das}{Data Access Services}{Fritz Mueller}{Mario Juric}  ;
+    \dmnode[left=2mm of das]{drp}{Data Release Production}{John Swinbank}{Jim Bosch}  ;
+    \dmnode[left=2mm of drp]{alerts}{Alert Production}{Simon Krughoff}{ Eric Bellm}  ;
+    \dmnode[right=2mm of suit]{square}{SQuaRE} {Frossie Economou}{ Michael Wood-Vasey {\tiny (interim)}} ;
+    \dmnode[right=2mm of square,text width=40mm]{infra}{Infrastructure \& Processing} { Margaret Gelman   }{ Robert Gruendl, Don Petravick} ;
+    \dmnode[right=2mm of infra]{lhn}{LHN \& Base Site} { Jeff Kantor }{ Mario Juric } ;
+
+
+
+ %% GROUPS .. 
+
+    \node (dmsg) [psbox, right=1.5cm of dmps] {\textbf{DM System Science Team}};
+    \node (dmlt) [mbox, left=1cm of man.west , text width=45mm] {\textbf{DMLT }};
+    \node (tct) [mbox, left=1cm of syseng.west , text width=45mm] {\textbf{TCT }};
+
+
+   \draw[line] (dmps.east) --  (dmsg.west);
+   \draw[line] (dmlt.east) --  (man.west);
+   \draw[line] (tct.east) --  (syseng.west);
+
+   \draw[line] (dmpm.north) -- ++(0,0.8) -| (pm.south);
+
+%dm lines second number is the proportional turning point of the line
+   \draw[line] (alerts.north) -- ++(0,0.3) -| (dmpm.south);
+   \draw[line] (drp.north) -- ++(0,0.3) -| (dmpm.south);
+   \draw[line] (das.north) -- ++(0,0.3) -| (dmpm.south);
+   \draw[line] (suit.north) -- ++(0,0.3) -| (dmpm.south);
+   \draw[line] (square.north) -- ++(0,0.3) -| (dmpm.south);
+   \draw[line] (infra.north) -- ++(0,0.3) -| (dmpm.south);
+   \draw[line] (lhn.north) -- ++(0,0.3) -| (dmpm.south);
+
+   \draw[line] (sysengg.east) to (udmpm.north);
+   \draw[line] (pcon.west) to (udmpm.north);
+   \draw[line] (docu.west) -| (udmpm.north);
+   \draw[line] (admin.west) -| (udmpm.north);
+%science
+   \draw[sline] (ps.west) to (pm.east);
+   \draw[sline] (dmps.west) to (dmpm.east);
+
+   \draw[line] (docu.east) --  (pdocu.west);
+   
+
+\end{tikzpicture}
+\end{document}
