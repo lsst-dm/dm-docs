@@ -199,3 +199,6 @@
 [submodule "LDM/LDM-294"]
 	path = LDM/LDM-294
 	url = https://github.com/lsst/LDM-294.git
+[submodule "DMTN/dmtn-038"]
+	path = DMTN/dmtn-038
+	url = https://github.com/lsst-dm/dmtn-038
