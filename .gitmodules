@@ -205,3 +205,18 @@
 [submodule "LDM/LDM-503"]
 	path = LDM/LDM-503
 	url = https://github.com/lsst/LDM-503
+[submodule "LDM/LDM-502"]
+	path = LDM/LDM-502
+	url = https://github.com/lsst/LDM-502
+[submodule "LDM/LDM-513"]
+	path = LDM/LDM-513
+	url = https://github.com/lsst-dmsst/LDM-513
+[submodule "LDM/LDM-17"]
+	path = LDM/LDM-17
+	url = https://github.com/lsst/reportDC3a
+[submodule "LDM/LDM-227"]
+	path = LDM/LDM-227
+	url = https://github.com/lsst/W13report
+[submodule "LDM/LDM-512"]
+	path = LDM/LDM-512
+	url = https://github.com/lsst/LDM-512
