@@ -53,9 +53,11 @@ textwidth=30cm,textheight=50mm]{geometry}
     \node (pm) [divbox, above=.5cm of dm] {\textbf{ Project Manager} Victor Krabendam};
     \node (dmps) [psbox, right=1.5cm of dmpm] {\textbf{ DM Project Scientist}\\ Mario Juri\'c};
     \node (ps) [psbox, right=1.5cm of pm] {\textbf{  Project Scientist}\\ \u{Z}eljko Ivezi\'c};
+    \node (pdocu) [mbox, right=2.5cm of ps, text width=45mm] {\textbf{LSST Documentalist}\\ Robert McKercher};
 
     \node (udmpm) [below=17mm of dmpm, text width=0mm]{};
-% SYSTEM ENG
+    \node (udmpm1) [below=8mm of dmpm, text width=0mm]{};
+% SYSTEM EN4G
             \node (sysengg) [mbox, text width=43mm, rectangle split, rectangle split parts=2, left=3.1cm of udmpm.north]
                 {
                 Systems Engineering
@@ -69,10 +71,10 @@ textwidth=30cm,textheight=50mm]{geometry}
     \node (reqeng) [psbox, below=1mm of sysarc, text width=39mm] {\textbf{Interface Scientist}\\ Gregory Dubois-Felsmann  };
 %%%% end SYSENG
 
-    \node (pcon) [mbox, right=3.1cm of udmpm.north , text width=45mm] {\textbf{Project Control/Scheduler }\\ Kevin Long?};
+    \node (cm) [mbox, right=3.1cm of udmpm1.north , text width=45mm] {\textbf{Configuration Manager }\\???};
+    \node (pcon) [mbox, below=5mm of cm , text width=45mm] {\textbf{Project Control/Scheduler }\\ Kevin Long?};
 
-    \node (docu) [mbox, below=5mm of pcon, text width=45mm] {\textbf{DM Documentalist}\\ Jonathon Sick ?};
-    \node (pdocu) [mbox, right=5mm of docu, text width=45mm] {\textbf{LSST Documentalist}\\ Robert McKercher};
+    \node (docu) [mbox, below=5mm of pcon, text width=45mm] {\textbf{DM Documentalist}\\ Jonathon Sick };
 
     \node (admin) [mbox, below=5mm of docu, text width=45mm] {\textbf{DM Admin}\\ Libby Petrick};
 
@@ -91,9 +93,9 @@ textwidth=30cm,textheight=50mm]{geometry}
 
  %% GROUPS .. 
 
-    \node (dmsg) [psbox, right=1.5cm of dmps] {\textbf{DM System Science Team}};
+    \node (dmsg) [psbox, right=1.0cm of dmps] {\textbf{DM System Science Team}};
     \node (dmlt) [mbox, left=1cm of man.west , text width=45mm] {\textbf{DMLT }};
-    \node (tct) [mbox, left=1cm of syseng.west , text width=45mm] {\textbf{TCT }};
+    \node (tct) [mbox, left=1cm of syseng.west , text width=45mm] {\textbf{DMCCB (was TCT) }};
 
 
    \draw[line] (dmps.east) --  (dmsg.west);
@@ -112,14 +114,15 @@ textwidth=30cm,textheight=50mm]{geometry}
    \draw[line] (lhn.north) -- ++(0,0.3) -| (dmpm.south);
 
    \draw[line] (sysengg.east) to (udmpm.north);
-   \draw[line] (pcon.west) to (udmpm.north);
+   \draw[line] (cm.west) -| (udmpm1.north);
+   \draw[line] (pcon.west) -| (udmpm1.north);
    \draw[line] (docu.west) -| (udmpm.north);
    \draw[line] (admin.west) -| (udmpm.north);
 %science
    \draw[sline] (ps.west) to (pm.east);
    \draw[sline] (dmps.west) to (dmpm.east);
 
-   \draw[line] (docu.east) --  (pdocu.west);
+   \draw[sline] (docu.east) -|  (pdocu.south);
    
 
 \end{tikzpicture}

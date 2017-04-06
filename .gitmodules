@@ -202,3 +202,6 @@
 [submodule "DMTN/dmtn-038"]
 	path = DMTN/dmtn-038
 	url = https://github.com/lsst-dm/dmtn-038
+[submodule "LDM/LDM-503"]
+	path = LDM/LDM-503
+	url = https://github.com/lsst/LDM-503
