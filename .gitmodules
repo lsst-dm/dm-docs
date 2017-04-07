@@ -220,3 +220,12 @@
 [submodule "LDM/LDM-512"]
 	path = LDM/LDM-512
 	url = https://github.com/lsst/LDM-512
+[submodule "DMTN/dmtn-039"]
+	path = DMTN/dmtn-039
+	url = https://github.com/lsst-dm/dmtn-039
+[submodule "DMTN/dmtn-040"]
+	path = DMTN/dmtn-040
+	url = https://github.com/lsst-dm/dmtn-040
+[submodule "DMTN/dmtn-041"]
+	path = DMTN/dmtn-041
+	url = https://github.com/lsst-dm/dmtn-041
