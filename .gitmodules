@@ -232,3 +232,6 @@
 [submodule "LSE/LSE-63"]
 	path = LSE/LSE-63
 	url = https://github.com/lsst/LSE-63
+[submodule "DMTN/dmtn-042"]
+	path = DMTN/dmtn-042
+	url = https://github.com/lsst-dm/dmtn-042
