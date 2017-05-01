@@ -241,3 +241,9 @@
 [submodule "DMTN/dmtn-044"]
 	path = DMTN/dmtn-044
 	url = https://github.com/lsst-dm/dmtn-044
+[submodule "SQR/sqr-018"]
+	path = SQR/sqr-018
+	url = https://github.com/lsst-sqre/sqr-018
+[submodule "SQR/sqr-019"]
+	path = SQR/sqr-019
+	url = https://github.com/lsst-sqre/sqr-019
