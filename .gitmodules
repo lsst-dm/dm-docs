@@ -247,3 +247,6 @@
 [submodule "SQR/sqr-019"]
 	path = SQR/sqr-019
 	url = https://github.com/lsst-sqre/sqr-019
+[submodule "LDM/LDM-522"]
+	path = LDM/LDM-522
+	url = https://github.com/lsst/LDM-522
