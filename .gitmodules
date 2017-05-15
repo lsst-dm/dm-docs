@@ -250,3 +250,6 @@
 [submodule "LDM/LDM-522"]
 	path = LDM/LDM-522
 	url = https://github.com/lsst/LDM-522
+[submodule "LDM/LDM-523"]
+	path = LDM/LDM-523
+	url = https://github.com/lsst-dmsst/LDM-523
