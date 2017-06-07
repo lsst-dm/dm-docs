@@ -20,3 +20,22 @@ The primary resource for baselined LSST Data Management documents is [LSST DocuS
 
 For information on the LSST science pipelines see <https://pipelines.lsst.io>.
 The LSST DM Developers Guide can be found at <https://developer.lsst.io>.
+
+## Updating master branches
+
+To update the master branches of all submodules do the following from the root directory of the repository:
+
+```
+git submodule foreach git checkout master
+git submodule foreach git pull
+```
+
+Then commit these changes with:
+
+```
+git add */*
+git commit
+git push
+```
+
+In the future this updating will be automated to ensure that the repository always reflects the current state of the documentation.

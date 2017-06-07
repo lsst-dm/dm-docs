@@ -205,3 +205,60 @@
 [submodule "LDM/LDM-503"]
 	path = LDM/LDM-503
 	url = https://github.com/lsst/LDM-503
+[submodule "LDM/LDM-502"]
+	path = LDM/LDM-502
+	url = https://github.com/lsst/LDM-502
+[submodule "LDM/LDM-513"]
+	path = LDM/LDM-513
+	url = https://github.com/lsst-dmsst/LDM-513
+[submodule "LDM/LDM-17"]
+	path = LDM/LDM-17
+	url = https://github.com/lsst/reportDC3a
+[submodule "LDM/LDM-227"]
+	path = LDM/LDM-227
+	url = https://github.com/lsst/W13report
+[submodule "LDM/LDM-512"]
+	path = LDM/LDM-512
+	url = https://github.com/lsst/LDM-512
+[submodule "DMTN/dmtn-039"]
+	path = DMTN/dmtn-039
+	url = https://github.com/lsst-dm/dmtn-039
+[submodule "DMTN/dmtn-040"]
+	path = DMTN/dmtn-040
+	url = https://github.com/lsst-dm/dmtn-040
+[submodule "DMTN/dmtn-041"]
+	path = DMTN/dmtn-041
+	url = https://github.com/lsst-dm/dmtn-041
+[submodule "LSE/LSE-63"]
+	path = LSE/LSE-63
+	url = https://github.com/lsst/LSE-63
+[submodule "DMTN/dmtn-042"]
+	path = DMTN/dmtn-042
+	url = https://github.com/lsst-dm/dmtn-042
+[submodule "DMTN/dmtn-043"]
+	path = DMTN/dmtn-043
+	url = https://github.com/lsst-dm/dmtn-043
+[submodule "DMTN/dmtn-044"]
+	path = DMTN/dmtn-044
+	url = https://github.com/lsst-dm/dmtn-044
+[submodule "SQR/sqr-018"]
+	path = SQR/sqr-018
+	url = https://github.com/lsst-sqre/sqr-018
+[submodule "SQR/sqr-019"]
+	path = SQR/sqr-019
+	url = https://github.com/lsst-sqre/sqr-019
+[submodule "LDM/LDM-522"]
+	path = LDM/LDM-522
+	url = https://github.com/lsst/LDM-522
+[submodule "LDM/LDM-523"]
+	path = LDM/LDM-523
+	url = https://github.com/lsst-dmsst/LDM-523
+[submodule "LDM/LDM-482"]
+	path = LDM/LDM-482
+	url = https://github.com/lsst/LDM-482
+[submodule "DMTN/dmtn-045"]
+	path = DMTN/dmtn-045
+	url = https://github.com/lsst-dm/dmtn-045
+[submodule "LSE/LSE-61"]
+	path = LSE/LSE-61
+	url = https://github.com/lsst/LSE-61
