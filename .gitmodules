@@ -262,3 +262,6 @@
 [submodule "LSE/LSE-61"]
 	path = LSE/LSE-61
 	url = https://github.com/lsst/LSE-61
+[submodule "LSE/LSE-319"]
+	path = LSE/LSE-319
+	url = https://github.com/lsst-dmsst/LSE-319
