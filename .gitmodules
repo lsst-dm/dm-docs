@@ -283,3 +283,6 @@
 [submodule "DMTR/DMTR-16"]
 	path = DMTR/DMTR-16
 	url = https://github.com/lsst-dm/DMTR-16
+[submodule "LDM/LDM-131"]
+	path = LDM/LDM-131
+	url = https://github.com/lsst/LDM-131
