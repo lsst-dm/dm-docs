@@ -292,3 +292,6 @@
 [submodule "LDM/LDM-542"]
 	path = LDM/LDM-542
 	url = https://github.com/lsst/LDM-542
+[submodule "LDM/LDM-534"]
+	path = LDM/LDM-534
+	url = https://github.com/lsst/LDM-534
