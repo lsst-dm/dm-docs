@@ -268,3 +268,25 @@
 [submodule "LDM/LDM-553"]
 	path = LDM/LDM-553
 	url = https://github.com/lsst/LDM-553
+[submodule "DMTR/DMTR-11"]
+	path = DMTR/DMTR-11
+	url = https://github.com/lsst-dm/DMTR-11
+[submodule "DMTR/DMTR-12"]
+	path = DMTR/DMTR-12
+	url = https://github.com/lsst-dm/DMTR-12
+[submodule "DMTR/DMTR-13"]
+	path = DMTR/DMTR-13
+	url = https://github.com/lsst-dm/DMTR-13
+[submodule "DMTR/DMTR-14"]
+	path = DMTR/DMTR-14
+	url = https://github.com/lsst-dm/DMTR-14
+[submodule "DMTR/DMTR-15"]
+	path = DMTR/DMTR-15
+	url = https://github.com/lsst-dm/DMTR-15
+[submodule "DMTR/DMTR-16"]
+	path = DMTR/DMTR-16
+	url = https://github.com/lsst-dm/DMTR-16
+[submodule "LDM/LDM-131"]
+	path = LDM/LDM-131
+	url = https://github.com/lsst/LDM-131
+>>>>>>> 3cfa1697e035bd8ccd55c3baa20ce6ca76f26206

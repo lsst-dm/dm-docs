@@ -12,7 +12,7 @@
 \usetikzlibrary{positioning,arrows,shapes,decorations.shapes,shapes.arrows}
 \usetikzlibrary{backgrounds,calc}
 
-\usepackage[paperwidth=32cm,paperheight=20cm,
+\usepackage[paperwidth=39cm,paperheight=22cm,
 left=-2mm,top=3mm,bottom=0mm,right=0mm,
 noheadfoot,marginparwidth=0pt,includemp=false
 ]{geometry}
@@ -22,7 +22,7 @@ noheadfoot,marginparwidth=0pt,includemp=false
 \setlayoutscale{0.5}\setlabelfont{\tiny}\printheadingsfalse\printparametersfalse
 \currentpage\pagedesign}
 
-\hypersetup{pdftitle={DM doc tree }, pdfsubject={Documentaiton tree for LSST DM }, pdfauthor={ William O'Mullane}}
+\hypersetup{pdftitle={DM doc tree }, pdfsubject={Documentation tree for LSST DM }, pdfauthor={ William O'Mullane}}
 
 \input{styles}
 
@@ -32,18 +32,18 @@ noheadfoot,marginparwidth=0pt,includemp=false
 \begin{tikzpicture}[node distance=0mm]
 
 
-	\node (scireq) [docbox] { LSST  Science Requirements LPM-17 (SRD)};
-	\node (daicd) [docboxicd, left=11cm of scireq] { DM Data Acq ICD LSE-68 };
+	\node (srd) [docbox] { LSST  Science Requirements LPM-17 (SRD)};
+	\node (daicd) [docboxicd, left=11cm of srd] { DM Data Acq ICD LSE-68 };
 	\node (camicd) [docboxicd, above=0.2cm of daicd] { DM Camera ICD LSE-69 };
 	\node (csicd) [docboxicd, above=0.2cm of camicd] { DM Telescope Control Sys ICD LSE-75 };
 	\node (sumicd) [docboxicd, above=0.2cm of csicd] { DM Summit Infra ICD LSE-76 };
 	\node (baseicd) [docboxicd, above=0.2cm of sumicd] { DM Base Infra ICD LSE-77 };
 	\node (epoicd) [docboxicd, above=0.2cm of baseicd] { DM EPO ICD LSE-131 };
 	\node (auxicd) [docboxicd, above=0.2cm of epoicd] { DM Telescope Aux  ICD LSE-140 };
-    \node (sysreq) [docbox, right = 1cm of scireq] { LSST  System Requirements LSE-29 (LSR)};
-    \node (oss) [docbox, right = 1cm of sysreq] { Observatory System Spec LSE-30 (OSS) };
+    \node (lsr) [docbox, right = 1cm of srd] { LSST  System Requirements LSE-29 (LSR)};
+    \node (oss) [docbox, right = 1cm of lsr] { Observatory System Spec LSE-30 (OSS) };
 %  LEGEND
-	\node(legend) [below=1cm of scireq] {};
+	\node(legend) [below=1cm of srd] {};
 	\node(legendr) [right=1cm of legend] {};
 	\draw[dline] (legend) to (legendr);
 	\node(dtext) [right= 2mm of legendr] {Specification and Design};
@@ -55,45 +55,80 @@ noheadfoot,marginparwidth=0pt,includemp=false
 	\node(legend3r) [right=1cm of legend3] {};
 	\draw[tline] (legend3) to (legend3r);
 	\node(ttext) [right= 2mm of legend3r] {Test and Validation};
-        \node (nf) [docboxm, left=5mm of legend2] { Comming in 2018};
+        \node (nf) [docboxm, left=5mm of legend2] { Coming in 2018};
 	\node (icd) [docboxicd, left=5mm of nf] { Interface Control Document (ICD) };
 	\node (upd) [docboxu, left=5mm of icd] { Needs Update};
 %%%
-	\node (dmreq) [docbox, above=5mm of scireq.north] { DM System Requirements  LSE-61 (DMSR)};
-	\node (svtp) [docbox, left=60mm of dmreq.west] { DM  Validation \& Test Plan LDM-503 (SVTP)};
-    \node (pmp) [docbox, right=10mm of dmreq.east] { DM PMP LDM-294};
-    \node (crd) [docboxm, text width=38mm,  right=5cm of pmp.east] {Config/Release/Deploy Management };
+	\node (srp) [above=15mm of srd.north] {};
+	\node (dmsr) [docbox, left=3mm of srp] { DM System Requirements  LSE-61 (DMSR)};
+	\node (dmsrp) [left=20 mm of dmsr] {};
+	\node (dqap) [docbox, below=7mm of dmsrp] { LSST Data Quality Assurance Plan LSE-63 (DQAP)};
+	\node (dpdd) [docbox, right=2mm of srp] { LSST Data Products  LSE-163 (DPDD)};
+	\node (svtp) [docbox, left=44mm of dmsr.west] { DM  Validation \& Test Plan LDM-503 (SVTP)};
+    \node (pmp) [docbox, right=7mm of dpdd.east] { DM PMP LDM-294};
+    \node (crd) [docboxm, text width=38mm,  right=97mm of pmp.east] {Config/Release/Deploy Management };
     \node (vcd) [docboxm, above=5mm of crd.north] { DM Verification Control (VCD)};
 
-    %\node (compz) [docboxm, above=5mm of dmreq.north] { Component Z Requirements LDM-XXX};
+    %\node (compz) [docboxm, above=5mm of dmsr.north] { Component Z Requirements LDM-XXX};
     %\node (compx) [docboxm, left=20mm of compz] { Component X Requirements LDM-XXX};
     %\node (crdots) [right=1mm of compx.east] {\huge \ldots \ldots};
-    \node (compd)  [docbox, above=5mm of dmreq.north] { Component Architecture  LDM-148};
+    \node (compd)  [docbox, above=21mm of srp.north] { Component Architecture  LDM-148};
 
-    \node (plc)  [docbox, above=10mm of compd] {L2 Pipeline Design LDM-151};
-    \node (mwc)  [docboxu, left=5mm of plc] { Midleware Design LDM-152};
+    \node (suitc) [docboxu, above=10mm of compd] { SUIT Design LDM-131};
+    \node (mwc)  [docboxu, left=5mm of suitc] { Middleware Design LDM-152};
     \node (qservc)  [docboxu, left=5mm of mwc] { Qserv Design LDM-135};
-    \node (infrac)  [docboxu, right=5mm of plc] { Services \& Infrastructure LDM-129};
-    \node (suitr) [docboxu, right=10mm of infrac.east] { SUIT Design LDM-130};
-    \node (userd)  [docbox, right=4.0cm of compd] { User Documumentation };
+    \node (infrac)  [docboxu, right=5mm of suitc] { Services \& Infrastructure LDM-129};
+    \node (plc)  [docbox, right=5mm of infrac.east] {L2 Pipeline Design LDM-151};
+    \node (netc) [docbox, right=5mm of plc.east] { Network Design LSE-78};
+    \node (userd)  [docbox, right=45mm of compd] { User Documentation };
 
-    \node (plt) [docboxm, above=29mm of plc] { L2 Pipelines Test Spec };
-    \node (qservt) [docboxu, above=29mm of qservc] { Qserv Test Spec };
+    %%%%%%%%%%% TEST SPECS %%%%%%%%%%%%%%
+    \node (ncsaenct) [docboxm, above=22mm of auxicd ] { NCSA Enclave Test Spec LDM-532};
+    \node (baseenct) [docboxm, right=7mm of ncsaenct] { Base Enclave Test Spec LDM-538};
+    \node (ccenct) [docboxm, right =7mm of baseenct ] { Comm Cluster Test Spec LDM-541};
 
 
-    \node (suitt) [docboxm, above=29mm of suitr] { SUIT Test Spec };
+    \node (dbbt) [docboxm, right =7mm of ccenct ] { Data BackBone  Test Spec LDM-535 };
+    
+    \node (datast) [docboxm, right=7mm of dbbt] { Data Services Test Spec LDM-536};
 
-    \node (pltr) [docboxm, above=5mm of plt] { L2 Pipelines Test Reports };
-    \node (qservtr) [docboxm, above=5mm of qservt] { Qserv Test Reports };
-    \node (suittr) [docboxm, above=5mm of suitt] { SUIT Test Reports };
+    \node (scipt) [docboxm, right=7mm of datast] {Science Platform  Test Spec LDM-540 };
+    \node (l1t) [docboxm, right=7mm of scipt] { L1 Test Spec LDM-533 };
+    \node (l2t) [docboxm, right=7mm of l1t] { L2 Test Spec  LDM-534};
+    \node (infrat) [docboxm, right=7mm of l2t] { DBB Infrastructure  Test Spec LDM-537};
 
-   \draw[dline] (dmreq.north) to (compd.south);
-   \draw[dline] (scireq.north) to (dmreq.south);
-   \draw[dline] (scireq.east) to (sysreq.west);
-   \draw[dline] (sysreq.east) to (oss.west);
+  %%%%%%%%%% component tests %%%%%%%%%%%%%%%%%%%
 
-   \node (suitrp) [below=5mm of suitr] {};
-   \draw[dline] (suitrp.north) to (suitr.south);
+    \node (l2kpm) [docboxu, above=5mm of l2t] { L2 KPMs  LDM-502};
+    \node (qservt) [docboxu, above=5mm of dbbt] { Qserv testing } ;
+
+  %%%%%%%%%% test reports %%%%%%%%%%%%%%%%%%%
+
+    \node (l2tr) [docboxm, above=25mm of l2t] { L2 Test Reports };
+    \node (ncsaenctr) [docboxm, above=25mm of ncsaenct] { NCSA Enclave Test Reports };
+    \node (baseenctr) [docboxm, above=25mm of baseenct] { Base Enclave Test Reports };
+    \node (ccenctr) [docboxm, above=25mm of ccenct] {Comm Cluster Test Reports };
+    
+    \node (dbbtr) [docboxm, above=25mm of dbbt] { DBB Test Reports };
+    \node (datastr) [docboxm, above=25mm of datast] { Data Services Test Reports };
+    \node (sciptr) [docboxm, above=25mm of scipt] { Science Platform Test Reports };
+    \node (l1tr) [docboxm, above=25mm of l1t] { L1 Test Reports };
+    \node (l2tr) [docboxm, above=25mm of l2t] { L2 Test Reports };
+    \node (infratr) [docboxm, above=25mm of infrat] { Infrastructure Test Reports };
+
+   \draw[dline] (dmsr.north) to (compd.south);
+   \draw[dline] (dpdd.west) to (dmsr.east);
+   \draw[dline] (dqap.east) to (dmsr.south);
+   \draw[dline] (lsr.north) to (dmsr.south);
+   \draw[dline] (srd.north) to (dpdd.south);
+   \draw[dline] (srd.north) to (dmsr.south);
+   \draw[dline] (lsr.west) to (srd.east)  ;
+   \draw[dline] (oss.west) to (lsr.east) ;
+
+
+   \node (suitrp) [below=5mm of suitc] {};
+   \draw[dline] (suitrp.north) to (suitc.south);
+   \draw[dline] (suitrp.north) -| (netc.south);
 
    \node (plcp) [below=5mm of plc] {};
    \draw[dline] (plcp.north) to (plc.south);
@@ -111,39 +146,91 @@ noheadfoot,marginparwidth=0pt,includemp=false
    \draw[dlines] (suitrp.north) -- (plcp.north);
    \draw[dlines] (compd.north) -- (plcp.north);
 
+   \node (ccenctp) [left=3mm of ccenct] {};
+   \node (ccenctpb) [below=10mm of ccenctp.east] {};
+   \draw[dline] (ccenctpb.west) |- (ccenct.west);
 
-   \node (qservtp) [left=5mm of qservt] {};
-   \node (qservtpb) [below=10mm of qservtp.east] {};
-   \draw[dlines] (svtp.north) -| (qservtpb.west);
-   \draw[dlines] (qservtpb.west) |- (qservt.west);
-   %\draw[dline] (qservtp.east) -- (qservt.west);
+   \node (baseenctp) [left=3mm of baseenct] {};
+   \node (baseenctpb) [below=10mm of baseenctp.east] {};
+   \draw[dline] (baseenctpb.west) |-  (baseenct.west);
+
+   \node (datastp) [left=3mm of datast] {};
+   \node (datastpb) [below=10mm of datastp.east] {};
+   \draw[dline] (datastpb.west) |- (datast.west);
+
+   \node (infratp) [left=3mm of infrat] {};
+   \node (infratpb) [below=10mm of infratp.east] {};
+   \draw[dline] (infratpb.west) |- (infrat.west);
    
-   \node (pltp) [left=5mm of plt] {};
+   \node (pltp) [left=3mm of l2t] {};
    \node (pltpb) [below=10mm of pltp.east] {};
-   %\draw[dlines] (svtp.north) |- (pltpb.west);
-   \draw[dline] (pltpb.west) |- (plt.west);
+   \draw[dline] (pltpb.west) |- (l2t.west);
 
-    \node (tst) [below=5mm of pltpb] {\color{red} Decide Components for test specs};
+    %\node (tst) [below=5mm of pltpb] {\color{red} Draft Component test specs};
 
-   \node (suittp) [left=5mm of suitt] {};
-   \node (suittpb) [below=10mm of suittp.east] {};
-   \draw[dlines] (qservtpb.west) -- (suittpb.west);
-   \draw[dline] (suittpb.west) |-  (suitt.west);
+   \node (sciptp) [left=3mm of scipt] {};
+   \node (sciptb) [below=10mm of sciptp.east] {};
+   \draw[dline] (sciptb.west) |-  (scipt.west);
 
-   \draw[tline] (pltr.north) -- ++(0,0.5)  -| (vcd.north);
-   \draw[tline] (suittr.north) -- ++(0,0.5)  -| (vcd.north);
-   \draw[tline] (qservtr.north) -- ++(0,0.5)  -| (vcd.north);
+   \node (l1tp) [left=3mm of l1t] {};
+   \node (l1tpb) [below=10mm of l1tp.east] {};
+   \draw[dline] (l1tpb.west) |-  (l1t.west);
 
-   \draw[tline] (svtp.east) to (dmreq.west);
-   \draw[tline] (plt.south) to (plc.north);
-   \draw[tline] (qservt.south) to (qservc.north);
-   \draw[tline] (suitt.south) to (suitr.north);
+   \node (l2tp) [left=3mm of l2t] {};
+   \node (l2tpb) [below=10mm of l2tp.east] {};
+   \draw[dline] (l2tpb.west) |-  (l2t.west);
+
+   \node (dbbtp) [left=3mm of dbbt] {};
+   \node (dbbtpb) [below=10mm of dbbtp.east] {};
+   \draw[dline] (dbbtpb.west) |-  (dbbt.west);
+
+   \node (ncsaenctp) [left=3mm of ncsaenct] {};
+   \node (ncsaenctpb) [below=10mm of ncsaenctp.east] {};
+   \draw[dline] (ncsaenctpb.west) |-  (ncsaenct.west);
+%long line for test specs
+   \node (baseenctp2) [left=-8mm of baseenct] {};
+   \node (baseenctpb2) [below=10mm of baseenct.center] {};
+   \draw[dlines] (baseenctpb2.west) -- (infratpb.west);
+   \draw[dlines] (baseenctpb2.west) -- (ncsaenctpb.west);
+   \draw[dlines] (svtp.north) |- (baseenctpb2.west);
+
+
+
+
+   \draw[tlines] (baseenctr.north) -- ++(0,0.6);
+   \draw[tlines] (ccenctr.north) -- ++(0,0.6);
+   \draw[tlines] (datastr.north) -- ++(0,0.6);
+   \draw[tlines] (sciptr.north) -- ++(0,0.6);
+   \draw[tlines] (l1tr.north) -- ++(0,0.6);
+   \draw[tlines] (l2tr.north) -- ++(0,0.6);
+   \draw[tlines] (dbbtr.north) -- ++(0,0.6);
+   \draw[tlines] (infratr.north) -- ++(0,0.6);
+   \draw[tlines] (infratr.north) -- ++(0,0.6);
+
+   %\node(ncsaenctrp) [above=4mm of ncsaenctr]{};
+   %\draw[tlines] (ncsaenctr.north) -- (ncsaenctrp.north);
+   %\draw[tline] (ncsaenctrp.north)   -| (vcd.north);
+   \draw[tline] (ncsaenctr.north) -- ++(0,0.6)  -| (vcd.north);
+
+   \draw[tline] (svtp.east) to (dmsr.west);
+   \draw[tline] (l2t.south) to (plc.north);
+   \draw[tline] (infrat.south) to (netc.north);
+
+   \draw[tline] (datast.south) to (qservc.north);
+   \draw[tline] (scipt.south) to (suitc.north);
 %reports
-   \draw[dline] (plt.north) to (pltr.south);
-   \draw[dline] (qservt.north) to (qservtr.south);
-   \draw[dline] (suitt.north) to (suittr.south);
+   \draw[dline] (infrat.north) to (infratr.south);
+   \draw[dline] (l2t.north) to (l2tr.south);
+   \draw[dline] (l1t.north) to (l1tr.south);
+   \draw[dline] (datast.north) to (datastr.south);
+   \draw[dline] (scipt.north) to (sciptr.south);
+   \draw[dline] (ncsaenct.north) to (ncsaenctr.south);
+   \draw[dline] (baseenct.north) to (baseenctr.south);
+   \draw[dline] (ccenct.north) to (ccenctr.south);
+   \draw[dline] (dbbt.north) to (dbbtr.south);
 
-   \draw[pline] (pmp.west) -|  (dmreq.east);
+   \draw[pline] (pmp.north) |-  (compd.east);
+   \draw[pline] (pmp.north) |-  (userd.west);
    \draw[pline] (pmp.east) -- (vcd.west);
    \draw[pline] (pmp.east) -|  (crd.west);
 
@@ -166,7 +253,7 @@ noheadfoot,marginparwidth=0pt,includemp=false
 
   
    \node (auxicdp) [right=0.8cm of auxicd.east] {};
-   \draw[dlines] (scireq.west) -| (auxicdp.west);
+   \draw[dlines] (srd.west) -| (auxicdp.west);
    \draw[dline] (auxicdp.west) -- (auxicd.east);
 
 \end{tikzpicture}

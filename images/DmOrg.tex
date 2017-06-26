@@ -12,7 +12,7 @@
 \usetikzlibrary{positioning,arrows,shapes,decorations.shapes,shapes.arrows}
 \usetikzlibrary{backgrounds,calc}
 
-\usepackage[paperwidth=31cm,paperheight=21cm,
+\usepackage[paperwidth=30cm,paperheight=21cm,
 left=-2mm,top=3mm,bottom=0mm,right=0mm,
 noheadfoot,marginparwidth=0pt,includemp=false ]{geometry}
 
@@ -27,14 +27,14 @@ noheadfoot,marginparwidth=0pt,includemp=false ]{geometry}
 \input{styles}
 
 
-\newcommand\dmnode[5][]{
+\newcommand\dmnode[6][]{
             \node (#2) [mbox, text width=36mm, rectangle split, rectangle split parts=2, #1]
                 {
                 \strut #3
                 \nodepart{second} \vspace{31mm}
                 };
              \node({#2}t) [mbox,minimum height=9mm, below=8mm of {#2}.north, text width=32mm] {\parbox[height=6mm]{0pt}{}{\small \bf T/CAM}\\\strut#4};
-             \node({#2}s) [psbox,minimum height=9mm, below=2pt of {#2}t, text width=32mm] {{\small \bf Product Owner}\\\strut#5};
+             \node({#2}s) [#6,minimum height=9mm, below=2pt of {#2}t, text width=32mm] {{\small \bf Product Owner}\\\strut#5};
         }
 
 
@@ -43,17 +43,16 @@ noheadfoot,marginparwidth=0pt,includemp=false ]{geometry}
 \begin{tikzpicture}[node distance=0mm]
 
 
-    \node (dm) [arcbox, align=left, text width=30cm,  minimum height=10mm, rectangle split, rectangle split parts=2]
-	{ \hspace{0.1cm} \textbf{Data Management Subsystem}
+    \node (dm) [arcbox, align=left, text width=24cm,  minimum height=10mm, rectangle split, rectangle split parts=2]
+    { \hspace{0.1cm} \textbf{Data Management Leadership Team (DMLT)}
 	   \nodepart{second} \vspace{150mm} 
 	};
 
     \node (dmpm) [divbox, above=-2.5cm of dm.north] {\textbf{DM Project Manager} William O'Mullane};
     \node (dmdpm) [divbox, left=1.5cm of dmpm] {\textbf{DM Deputy Manager} John Swinbank};
-    \node (pm) [divbox, above=.5cm of dm] {\textbf{ Project Manager} Victor Krabendam};
+    \node (pm) [divbox, above=.5cm of dm] {\textbf{ Project Manager} Victor Krabbendam};
     \node (dmps) [psbox, right=1.5cm of dmpm, minimum height=12mm] {\textbf{ DM Subsystem Scientist}\\ Mario Juri\'c};
     \node (ps) [psbox, right=1.5cm of pm, minimum height=12mm] {\textbf{  Project Scientist}\\ \u{Z}eljko Ivezi\'c};
-    \node (pdocu) [mbox, right=3.5cm of ps, text width=35mm, minimum height=12mm] {\textbf{LSST Documentalist}\\ Robert McKercher};
 
     \node (udmpm) [below=39mm of dmpm, text width=0mm]{};
     \node (udmpm1) [below=18mm of dmpm, text width=0mm]{};
@@ -74,14 +73,16 @@ noheadfoot,marginparwidth=0pt,includemp=false ]{geometry}
 %%%% end SYSENG
 
     \node (cm) [mbox, right=3.1cm of udmpm1.north , text width=45mm] {\textbf{Configuration/Release Manager }\\???};
-    \node (pcon) [mbox, below=5mm of cm , text width=45mm] {\textbf{Project Control/Scheduler }\\ Kevin Long?};
-    \node (docu) [mbox, below=5mm of pcon, text width=45mm] {\textbf{DM Documentalist}\\ Jonathan Sick };
-    \node (admin) [mbox, below=5mm of docu, text width=45mm] {\textbf{DM Admin}\\ Libby Petrick};
+    \node (pconp) [below=5mm of cm] {};
+    \node (docu) [mbox, right=70mm of pconp , text width=45mm] {\textbf{DM Documentalist}\\ Jonathan Sick };
+    \node (pcon) [mbox, below=5mm of docu , text width=45mm] {\textbf{Project Control/Scheduler }\\ Kevin Long};
+    \node (admin) [mbox, below=5mm of pcon, text width=45mm] {\textbf{DM Admin}\\ Libby Petrick};
 
+    \node (pdocu) [mbox, right=4.5cm of ps, text width=45mm, minimum height=12mm] {\textbf{LSST Documentalist}\\ Robert McKercher};
 
     %\node (al) [below=69mm of dmpm, text width=0mm]{};
-    \dmnode[left=1mm of udmpm2.north]{suit}{SUIT}{Xiuqin Wu}{Gregory Dubois-Felsmann} ;
-    \dmnode[base left=2mm of suit]{das}{Data Access Services}{Fritz Mueller}{Mario Juric}
+    \dmnode[left=1mm of udmpm2.north]{suit}{SUIT}{Xiuqin Wu}{Gregory Dubois-Felsmann}{psbox} ;
+    \dmnode[base left=2mm of suit]{das}{Data Access Services}{Fritz Mueller}{Mario Juric} {psbox};
 
     \node (drp) [mbox, text width=36mm, rectangle split, rectangle split parts=2, base left=2mm of das]
          {Science Pipelines \strut \nodepart{second} \vspace{31mm}};
@@ -90,7 +91,7 @@ noheadfoot,marginparwidth=0pt,includemp=false ]{geometry}
          \node(drps) [psbox,minimum height=9mm, below=2pt of drpt, text width=32mm] {{\small \bf DRP Owner}\\\strut Jim Bosch};
          \node(alerts) [psbox,minimum height=9mm, below=2pt of drps, text width=32mm] {{\small \bf Alerts Owner}\\\strut Eric Bellm};
 
-    \dmnode[base right=2mm of suit]{square}{SQuaRE} {\strut Frossie Economou}{ Simon Krughoff } ;
+	 \dmnode[base right=2mm of suit]{square}{SQuaRE} {\strut Frossie Economou}{ Simon Krughoff }{psbox} ;
 
     \node (infra) [mbox, text width=36mm, rectangle split, rectangle split parts=2, base right=2mm of square]
          {Data Facility \strut \nodepart{second} \vspace{31mm}};
@@ -99,13 +100,13 @@ noheadfoot,marginparwidth=0pt,includemp=false ]{geometry}
          \node(infrapo) [pobox,minimum height=9mm, below=2pt of dft, text width=32mm] {{\small \bf Infrastructure Owner}\\\strut Don Petravick};
          \node(procpo) [psbox,minimum height=9mm, below=2pt of infrapo, text width=32mm] {{\small \bf Proc Systems Owner}\\\strut Robert Gruendl};
 
-    \dmnode[base right=2mm of infra]{lhn}{LHN \& Base Site}{Jeff Kantor}{Mario Juric} ;
+	 \dmnode[base right=2mm of infra]{lhn}{LHN \& Base Site}{Jeff Kantor}{Don Petravick}{pobox} ;
 
  %% GROUPS ..
 
     \node (dmsg) [psbox, right=1.0cm of dmps, minimum height=12mm] {\textbf{DM Subsystem Science Team}};
-    \node (dmlt) [mbox, left=1cm of man.west , text width=45mm] {\textbf{DMLT }};
-    \node (tct) [mbox, left=1cm of syseng.west , text width=45mm] {\textbf{DMCCB (was TCT) }};
+    \node (dmlt) [mbox, left=1cm of man.west , text width=25mm] {\textbf{DMLT }};
+    \node (tct) [mbox, left=1cm of syseng.west , text width=25mm] {\textbf{DMCCB (was TCT) }};
 
    \draw[line] (dmps.east) --  (dmsg.west);
    \draw[line] (dmps.north) --  (ps.south);
@@ -133,7 +134,7 @@ noheadfoot,marginparwidth=0pt,includemp=false ]{geometry}
    \draw[sline] (ps.west) to (pm.east);
    \draw[sline] (dmps.west) to (dmpm.east);
 
-   \draw[sline] (docu.east) -|  (pdocu.south);
+   \draw[sline] (docu.north) -|  (pdocu.south);
 
 \end{tikzpicture}
 \end{document}
