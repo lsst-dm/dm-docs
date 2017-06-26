@@ -265,3 +265,6 @@
 [submodule "LSE/LSE-319"]
 	path = LSE/LSE-319
 	url = https://github.com/lsst-dmsst/LSE-319
+[submodule "LDM/LDM-553"]
+	path = LDM/LDM-553
+	url = https://github.com/lsst/LDM-553
