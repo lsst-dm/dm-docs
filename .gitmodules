@@ -286,6 +286,18 @@
 [submodule "DMTR/DMTR-16"]
 	path = DMTR/DMTR-16
 	url = https://github.com/lsst-dm/DMTR-16
-[submodule "LDM/LDM-131"]
-	path = LDM/LDM-131
-	url = https://github.com/lsst/LDM-131
+[submodule "LDM/LDM-552"]
+	path = LDM/LDM-552
+	url = https://github.com/lsst/LDM-552
+[submodule "LDM/LDM-542"]
+	path = LDM/LDM-542
+	url = https://github.com/lsst/LDM-542
+[submodule "LDM/LDM-534"]
+	path = LDM/LDM-534
+	url = https://github.com/lsst/LDM-534
+[submodule "LDM/LDM-555"]
+	path = LDM/LDM-555
+	url = https://github.com/lsst/LDM-555
+[submodule "LDM/LDM-556"]
+	path = LDM/LDM-556
+	url = https://github.com/lsst/LDM-556
