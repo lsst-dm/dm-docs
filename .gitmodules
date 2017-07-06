@@ -301,3 +301,12 @@
 [submodule "LDM/LDM-556"]
 	path = LDM/LDM-556
 	url = https://github.com/lsst/LDM-556
+[submodule "DMTN/dmtn-046"]
+	path = DMTN/dmtn-046
+	url = https://github.com/lsst-dm/dmtn-046
+[submodule "DMTN/dmtn-047"]
+	path = DMTN/dmtn-047
+	url = https://github.com/lsst-dm/dmtn-047
+[submodule "DMTR/DMTR-21"]
+	path = DMTR/DMTR-21
+	url = https://github.com/lsst-dm/DMTR-21
