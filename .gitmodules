@@ -328,3 +328,9 @@
 [submodule "LDM/LDM-564"]
 	path = LDM/LDM-564
 	url = https://github.com/lsst/LDM-564
+[submodule "DMTN/dmtn-051"]
+	path = DMTN/dmtn-051
+	url = https://github.com/lsst-dm/dmtn-051
+[submodule "DMTN/dmtn-052"]
+	path = DMTN/dmtn-052
+	url = https://github.com/lsst-dm/dmtn-052
