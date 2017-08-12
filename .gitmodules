@@ -328,3 +328,6 @@
 [submodule "LDM/LDM-564"]
 	path = LDM/LDM-564
 	url = https://github.com/lsst/LDM-564
+[submodule "LDM/LDM-572"]
+	path = LDM/LDM-572
+	url = https://github.com/lsst/LDM-572
