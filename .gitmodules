@@ -394,3 +394,18 @@
 [submodule "DMTN/dmtn-066"]
 	path = DMTN/dmtn-066
 	url = https://github.com/lsst-dm/dmtn-066
+[submodule "DMTN/dmtn-067"]
+	path = DMTN/dmtn-067
+	url = https://github.com/lsst-dm/dmtn-067
+[submodule "DMTN/dmtn-068"]
+	path = DMTN/dmtn-068
+	url = https://github.com/lsst-dm/dmtn-068
+[submodule "DMTR/DMTR-53"]
+	path = DMTR/DMTR-53
+	url = https://github.com/lsst-dm/DMTR-53
+[submodule "LDM/LDM-554"]
+	path = LDM/LDM-554
+	url = https://github.com/lsst/LDM-554
+[submodule "LDM/LDM-533"]
+	path = LDM/LDM-533
+	url = https://github.com/lsst/LDM-533
