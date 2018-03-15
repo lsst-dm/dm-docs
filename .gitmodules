@@ -439,3 +439,9 @@
 [submodule "SQR/sqr-020"]
 	path = SQR/sqr-020
 	url = https://github.com/lsst-sqre/sqr-020
+[submodule "DMTN/dmtn-074"]
+	path = DMTN/dmtn-074
+	url = https://github.com/lsst-dm/dmtn-074
+[submodule "DMTN/dmtn-075"]
+	path = DMTN/dmtn-075
+	url = https://github.com/lsst-dm/dmtn-075
