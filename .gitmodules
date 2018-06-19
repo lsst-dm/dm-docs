@@ -499,3 +499,33 @@
 [submodule "SQR/sqr-026"]
 	path = SQR/sqr-026
 	url = https://github.com/lsst-sqre/sqr-026
+[submodule "LDM/LDM-639"]
+	path = LDM/LDM-639
+	url = https://github.com/lsst/LDM-639
+[submodule "LDM/LDM-636"]
+	path = LDM/LDM-636
+	url = https://github.com/lsst/LDM-636
+[submodule "LDM/LDM-632"]
+	path = LDM/LDM-632
+	url = https://github.com/lsst/LDM-632
+[submodule "LDM/LDM-635"]
+	path = LDM/LDM-635
+	url = https://github.com/lsst/LDM-635
+[submodule "LDM/LDM-634"]
+	path = LDM/LDM-634
+	url = https://github.com/lsst/LDM-634
+[submodule "LDM/LDM-640"]
+	path = LDM/LDM-640
+	url = https://github.com/lsst/LDM-640
+[submodule "LDM/LDM-637"]
+	path = LDM/LDM-637
+	url = https://github.com/lsst/LDM-637
+[submodule "LDM/LDM-622"]
+	path = LDM/LDM-622
+	url = https://github.com/lsst/LDM-622
+[submodule "LDM/LDM-633"]
+	path = LDM/LDM-633
+	url = https://github.com/lsst/LDM-633
+[submodule "LDM/LDM-638"]
+	path = LDM/LDM-638
+	url = https://github.com/lsst/LDM-638
