@@ -481,3 +481,21 @@
 [submodule "DMTR/DMTR-62"]
 	path = DMTR/DMTR-62
 	url = https://github.com/lsst-dm/DMTR-62
+[submodule "SQR/sqr-021"]
+	path = SQR/sqr-021
+	url = https://github.com/lsst-sqre/sqr-021
+[submodule "SQR/sqr-022"]
+	path = SQR/sqr-022
+	url = https://github.com/lsst-sqre/sqr-022
+[submodule "SQR/sqr-023"]
+	path = SQR/sqr-023
+	url = https://github.com/lsst-sqre/sqr-023
+[submodule "SQR/sqr-024"]
+	path = SQR/sqr-024
+	url = https://github.com/lsst-sqre/sqr-024
+[submodule "SQR/sqr-025"]
+	path = SQR/sqr-025
+	url = https://github.com/lsst-sqre/sqr-025
+[submodule "SQR/sqr-026"]
+	path = SQR/sqr-026
+	url = https://github.com/lsst-sqre/sqr-026
