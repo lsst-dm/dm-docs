@@ -418,9 +418,6 @@
 [submodule "DMTN/dmtn-070"]
 	path = DMTN/dmtn-070
 	url = https://github.com/lsst-dm/dmtn-070
-[submodule "LSE/LSE-349"]
-	path = LSE/LSE-349
-	url = https://github.com/lsst/LSE-349
 [submodule "LDM/LDM-602"]
 	path = LDM/LDM-602
 	url = https://github.com/lsst/LDM-602
