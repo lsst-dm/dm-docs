@@ -490,9 +490,6 @@
 [submodule "SQR/sqr-023"]
 	path = SQR/sqr-023
 	url = https://github.com/lsst-sqre/sqr-023
-[submodule "SQR/sqr-024"]
-	path = SQR/sqr-024
-	url = https://github.com/lsst-sqre/sqr-024
 [submodule "SQR/sqr-025"]
 	path = SQR/sqr-025
 	url = https://github.com/lsst-sqre/sqr-025
@@ -529,3 +526,6 @@
 [submodule "LDM/LDM-638"]
 	path = LDM/LDM-638
 	url = https://github.com/lsst/LDM-638
+[submodule "LPM/LPM-231"]
+	path = LPM/LPM-231
+	url = https://github.com/lsst/LPM-231
