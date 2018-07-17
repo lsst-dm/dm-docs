@@ -529,3 +529,9 @@
 [submodule "LPM/LPM-231"]
 	path = LPM/LPM-231
 	url = https://github.com/lsst/LPM-231
+[submodule "DMTR/DMTR-81"]
+	path = DMTR/DMTR-81
+	url = https://github.com/lsst-dm/DMTR-81
+[submodule "DMTR/DMTR-91"]
+	path = DMTR/DMTR-91
+	url = https://github.com/lsst-dm/DMTR-91
